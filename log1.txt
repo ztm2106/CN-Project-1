@@ -1,0 +1,137 @@
+2024-10-23 13:40:24,293 - Proxy listening on port 8000, forwarding to server 127.0.0.1:80 via fake IP 127.0.0.1
+2024-10-23 13:40:53,010 - Connection established with client ('127.0.0.1', 52116)
+2024-10-23 13:40:53,037 - Connection established with client ('127.0.0.1', 52118)
+2024-10-23 13:40:53,038 - Connected to server 127.0.0.1 using fake IP 127.0.0.1
+2024-10-23 13:40:53,039 - Connected to server 127.0.0.1 using fake IP 127.0.0.1
+2024-10-23 13:41:03,021 - 1729705263.020186 0.000050 127.0.0.1 unknown_chunk 779 bytes
+2024-10-23 13:41:03,040 - Timeout occurred during data forwarding
+2024-10-23 13:41:03,041 - Closed connection with client and server
+2024-10-23 13:41:03,167 - 1729705263.167562 0.000040 127.0.0.1 unknown_chunk 309
+2024-10-23 13:41:13,168 - Timeout occurred during data forwarding
+2024-10-23 13:41:13,168 - Closed connection with client and server
+2024-10-23 13:41:13,263 - Connection established with client ('127.0.0.1', 52152)
+2024-10-23 13:41:13,267 - Connection established with client ('127.0.0.1', 52154)
+2024-10-23 13:41:13,268 - Connected to server 127.0.0.1 using fake IP 127.0.0.1
+2024-10-23 13:41:13,269 - 1729705273.269469 0.000067 127.0.0.1 unknown_chunk 711 bytes
+2024-10-23 13:41:13,269 - Connected to server 127.0.0.1 using fake IP 127.0.0.1
+2024-10-23 13:41:13,300 - 1729705273.300022 0.000062 127.0.0.1 unknown_chunk 389
+2024-10-23 13:41:23,270 - Timeout occurred during data forwarding
+2024-10-23 13:41:23,279 - Closed connection with client and server
+2024-10-23 13:41:23,300 - Timeout occurred during data forwarding
+2024-10-23 13:41:23,301 - Closed connection with client and server
+2024-10-23 13:57:23,677 - Proxy listening on port 8000, forwarding to server 127.0.0.1:80 via fake IP 127.0.0.1
+2024-10-23 13:57:24,308 - Connection established with client ('127.0.0.1', 56087)
+2024-10-23 13:57:24,309 - Connection established with client ('127.0.0.1', 56089)
+2024-10-23 13:57:24,310 - Connected to server 127.0.0.1 using fake IP 127.0.0.1
+2024-10-23 13:57:24,311 - 1729706244.310986 0.000057 127.0.0.1 unknown_chunk 711 bytes
+2024-10-23 13:57:24,311 - Connected to server 127.0.0.1 using fake IP 127.0.0.1
+2024-10-23 13:57:24,356 - 1729706244.356640 0.000044 127.0.0.1 unknown_chunk 389
+2024-10-23 13:57:27,280 - 1729706247.280464 0.000093 127.0.0.1 unknown_chunk 711 bytes
+2024-10-23 13:57:27,301 - 1729706247.301456 0.000061 127.0.0.1 unknown_chunk 388
+2024-10-23 13:57:34,312 - Timeout occurred during data forwarding
+2024-10-23 13:57:34,314 - Closed connection with client and server
+2024-10-23 13:57:37,302 - Timeout occurred during data forwarding
+2024-10-23 13:57:37,309 - Closed connection with client and server
+2024-10-23 13:58:01,857 - Connection established with client ('127.0.0.1', 56246)
+2024-10-23 13:58:01,861 - Connection established with client ('127.0.0.1', 56247)
+2024-10-23 13:58:01,862 - Connected to server 127.0.0.1 using fake IP 127.0.0.1
+2024-10-23 13:58:01,862 - 1729706281.862783 0.000046 127.0.0.1 unknown_chunk 711 bytes
+2024-10-23 13:58:01,863 - Connected to server 127.0.0.1 using fake IP 127.0.0.1
+2024-10-23 13:58:01,869 - 1729706281.868971 0.000159 127.0.0.1 unknown_chunk 389
+2024-10-23 13:58:11,863 - Timeout occurred during data forwarding
+2024-10-23 13:58:11,864 - Closed connection with client and server
+2024-10-23 13:58:11,869 - Timeout occurred during data forwarding
+2024-10-23 13:58:11,889 - Closed connection with client and server
+2024-10-23 14:13:19,675 - Proxy listening on port 8000, forwarding to server 127.0.0.1:80 via fake IP 127.0.0.1
+2024-10-23 14:13:22,479 - Connection established with client ('127.0.0.1', 60063)
+2024-10-23 14:13:22,480 - Connection established with client ('127.0.0.1', 60065)
+2024-10-23 14:13:22,481 - Connected to server 127.0.0.1 using fake IP 127.0.0.1
+2024-10-23 14:13:22,481 - Connected to server 127.0.0.1 using fake IP 127.0.0.1
+2024-10-23 14:13:22,482 - 1729707202.482310 0.000215 127.0.0.1 unknown_chunk 717
+2024-10-23 14:13:22,518 - 1729707202.518675 0.000032 127.0.0.1 unknown_chunk 389
+2024-10-23 14:13:32,482 - Timeout occurred during data forwarding
+2024-10-23 14:13:32,483 - Closed connection with client and server
+2024-10-23 14:13:32,519 - Timeout occurred during data forwarding
+2024-10-23 14:13:32,519 - Closed connection with client and server
+2024-10-23 14:31:35,442 - Proxy listening on port 8000, forwarding to server 127.0.0.1:80 via fake IP 127.0.0.1
+2024-10-23 14:31:39,449 - Connection established with client ('127.0.0.1', 60821)
+2024-10-23 14:31:39,450 - Connected to server 127.0.0.1 using fake IP 127.0.0.1
+2024-10-23 14:31:39,451 - 1729708299.450562 0.000060 127.0.0.1 unknown_chunk 700
+2024-10-23 14:31:39,454 - Connection established with client ('127.0.0.1', 60824)
+2024-10-23 14:31:39,455 - Connected to server 127.0.0.1 using fake IP 127.0.0.1
+2024-10-23 14:31:39,461 - 1729708299.461426 0.000053 127.0.0.1 unknown_chunk 389
+2024-10-23 14:31:49,456 - Timeout occurred during data forwarding
+2024-10-23 14:31:49,457 - Closed connection with client and server
+2024-10-23 14:31:49,461 - Timeout occurred during data forwarding
+2024-10-23 14:31:49,461 - Closed connection with client and server
+2024-10-23 15:23:30,869 - Proxy listening on port 8000, forwarding to server 127.0.0.1:80 via fake IP 127.0.0.1
+2024-10-23 15:24:08,621 - Connection established with client ('127.0.0.1', 52742)
+2024-10-23 15:24:08,624 - Connected to server 127.0.0.1 using fake IP 127.0.0.1
+2024-10-23 15:24:08,626 - 1729711448.624830 0.000060 127.0.0.1 unknown_chunk 720
+2024-10-23 15:24:08,657 - 1729711448.657706 0.000031 127.0.0.1 unknown_chunk 389
+2024-10-23 15:24:08,993 - 1729711448.993151 0.000131 127.0.0.1 unknown_chunk 594
+2024-10-23 15:24:09,004 - 1729711449.004022 0.000068 127.0.0.1 unknown_chunk 410
+2024-10-23 15:24:19,004 - Timeout occurred during data forwarding
+2024-10-23 15:24:19,004 - Closed connection with client and server
+2024-10-23 15:27:59,550 - Proxy listening on port 8000, forwarding to server 127.0.0.1:80 via fake IP 127.0.0.1
+2024-10-23 15:28:02,826 - Connection established with client ('127.0.0.1', 53798)
+2024-10-23 15:28:02,828 - Connected to server 127.0.0.1 using fake IP 127.0.0.1
+2024-10-23 15:28:02,828 - Connection established with client ('127.0.0.1', 53800)
+2024-10-23 15:28:02,829 - 1729711682.828988 0.000061 127.0.0.1 unknown_chunk 785
+2024-10-23 15:28:02,830 - Connected to server 127.0.0.1 using fake IP 127.0.0.1
+2024-10-23 15:28:02,869 - 1729711682.869666 0.000058 127.0.0.1 unknown_chunk 309
+2024-10-23 15:28:12,831 - Timeout occurred during data forwarding
+2024-10-23 15:28:12,831 - Closed connection with client and server
+2024-10-23 15:28:12,870 - Timeout occurred during data forwarding
+2024-10-23 15:28:12,882 - Closed connection with client and server
+2024-10-23 15:37:22,393 - Proxy listening on port 8000, forwarding to server 127.0.0.1:80 via fake IP 127.0.0.1
+2024-10-23 15:37:30,710 - Connection established with client ('127.0.0.1', 56262)
+2024-10-23 15:37:30,711 - Connection established with client ('127.0.0.1', 56263)
+2024-10-23 15:37:30,712 - Connected to server 127.0.0.1 using fake IP 127.0.0.1
+2024-10-23 15:37:30,713 - 1729712250.712792 0.000037 127.0.0.1 unknown_chunk 785
+2024-10-23 15:37:30,714 - Connected to server 127.0.0.1 using fake IP 127.0.0.1
+2024-10-23 15:37:30,755 - 1729712250.754935 0.000089 127.0.0.1 unknown_chunk 309
+2024-10-23 15:37:40,715 - Timeout occurred during data forwarding
+2024-10-23 15:37:40,716 - Closed connection with client and server
+2024-10-23 15:37:40,756 - Timeout occurred during data forwarding
+2024-10-23 15:37:40,756 - Closed connection with client and server
+2024-10-23 15:40:21,016 - Connection established with client ('127.0.0.1', 56986)
+2024-10-23 15:40:21,019 - Connection established with client ('127.0.0.1', 56987)
+2024-10-23 15:40:21,020 - Connected to server 127.0.0.1 using fake IP 127.0.0.1
+2024-10-23 15:40:21,020 - Connected to server 127.0.0.1 using fake IP 127.0.0.1
+2024-10-23 15:40:21,021 - 1729712421.021036 0.000036 127.0.0.1 unknown_chunk 785
+2024-10-23 15:40:21,057 - 1729712421.057250 0.000052 127.0.0.1 unknown_chunk 309
+2024-10-23 15:40:31,022 - Timeout occurred during data forwarding
+2024-10-23 15:40:31,022 - Closed connection with client and server
+2024-10-23 15:40:31,058 - Timeout occurred during data forwarding
+2024-10-23 15:40:31,059 - Closed connection with client and server
+2024-10-23 15:40:37,109 - Connection established with client ('127.0.0.1', 57060)
+2024-10-23 15:40:37,112 - Connection established with client ('127.0.0.1', 57061)
+2024-10-23 15:40:37,113 - Connected to server 127.0.0.1 using fake IP 127.0.0.1
+2024-10-23 15:40:37,113 - Connected to server 127.0.0.1 using fake IP 127.0.0.1
+2024-10-23 15:40:37,114 - 1729712437.113945 0.000033 127.0.0.1 unknown_chunk 785
+2024-10-23 15:40:37,119 - 1729712437.119246 0.000038 127.0.0.1 unknown_chunk 309
+2024-10-23 15:40:37,960 - 1729712437.960223 0.000056 127.0.0.1 unknown_chunk 785
+2024-10-23 15:40:37,961 - 1729712437.961113 0.000032 127.0.0.1 unknown_chunk 308
+2024-10-23 15:40:38,546 - 1729712438.546240 0.000037 127.0.0.1 unknown_chunk 785
+2024-10-23 15:40:38,552 - 1729712438.552653 0.000134 127.0.0.1 unknown_chunk 308
+2024-10-23 15:40:38,916 - 1729712438.916372 0.000060 127.0.0.1 unknown_chunk 785
+2024-10-23 15:40:38,917 - 1729712438.917463 0.000078 127.0.0.1 unknown_chunk 308
+2024-10-23 15:40:39,275 - 1729712439.275185 0.000034 127.0.0.1 unknown_chunk 785
+2024-10-23 15:40:39,276 - 1729712439.275975 0.000048 127.0.0.1 unknown_chunk 308
+2024-10-23 15:40:39,757 - 1729712439.757587 0.000055 127.0.0.1 unknown_chunk 785
+2024-10-23 15:40:39,760 - 1729712439.760420 0.000057 127.0.0.1 unknown_chunk 308
+2024-10-23 15:40:45,781 - 1729712445.781269 0.000051 127.0.0.1 unknown_chunk 785
+2024-10-23 15:40:45,781 - Closed connection with client and server
+2024-10-23 15:40:45,782 - 1729712445.782268 0.000073 127.0.0.1 unknown_chunk 785
+2024-10-23 15:40:45,783 - Connection established with client ('127.0.0.1', 57100)
+2024-10-23 15:40:45,784 - Connected to server 127.0.0.1 using fake IP 127.0.0.1
+2024-10-23 15:40:45,811 - 1729712445.811033 0.000042 127.0.0.1 unknown_chunk 309
+2024-10-23 15:40:46,232 - 1729712446.232282 0.000037 127.0.0.1 unknown_chunk 785
+2024-10-23 15:40:46,252 - 1729712446.252074 0.000042 127.0.0.1 unknown_chunk 308
+2024-10-23 15:40:50,953 - 1729712450.953044 0.000055 127.0.0.1 unknown_chunk 779
+2024-10-23 15:40:50,954 - 1729712450.954258 0.000029 127.0.0.1 unknown_chunk 308
+2024-10-23 15:40:55,786 - Timeout occurred during data forwarding
+2024-10-23 15:40:55,802 - Closed connection with client and server
+2024-10-23 15:41:00,955 - Timeout occurred during data forwarding
+2024-10-23 15:41:00,956 - Closed connection with client and server

@@ -1,0 +1,82 @@
+#!/usr/bin/env python3.10
+import socket
+import sys
+
+def start_proxy(listen_port, fake_ip, server_ip, server_port=8080):
+    # Create a socket for listening to incoming connections from clients
+    proxy_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    proxy_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+    proxy_socket.bind(('', listen_port))  # Bind to all interfaces (IP doesn't matter here)
+    proxy_socket.listen(5)
+    print(f"Proxy listening on port {listen_port}, forwarding to server {server_ip}:{server_port} via fake IP {fake_ip}")
+
+    try:
+        while True:
+            client_socket, client_address = proxy_socket.accept()
+            print(f"Connection established with client {client_address}")
+            
+            # Create a new socket for connecting to the server, binding it to the fake IP
+            server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+            server_socket.bind((fake_ip, 0))  # Bind to the fake IP for outbound connections
+            server_socket.connect((server_ip, server_port))
+            print(f"Connection established with server {server_ip} using fake IP {fake_ip}")
+
+            # Forward messages between client and server
+            forward_messages(client_socket, server_socket)
+
+            client_socket.close()
+            server_socket.close()
+            print("Closed connections with client and server")
+    
+    finally:
+        proxy_socket.close()
+
+def forward_messages(client_socket, server_socket):
+    """Forward messages between the client and server in both directions."""
+    try:
+        while True:
+            # Receive message from the client
+            client_message = receive_message(client_socket)
+            if client_message:
+                print(f"Proxy received from client: {client_message.strip()}")
+                
+                # Forward to the server
+                print(f"Proxy forwarding to server: {client_message.strip()}")
+                server_socket.sendall(client_message.encode())
+                
+                # Receive response from the server
+                server_message = receive_message(server_socket)
+                if server_message:
+                    print(f"Proxy received from server: {server_message.strip()}")
+                    
+                    # Forward back to the client
+                    print(f"Proxy forwarding to client: {server_message.strip()}")
+                    client_socket.sendall(server_message.encode())
+            else:
+                print("Client disconnected")
+                break
+    except socket.error as e:
+        print(f"Socket error: {e}")
+
+def receive_message(sock):
+    """Receive a message ending with the newline character '\n'."""
+    message = []
+    while True:
+        chunk = sock.recv(1).decode()
+        if not chunk:
+            return None
+        message.append(chunk)
+        if chunk == '\n':
+            break
+    return ''.join(message)
+
+if __name__ == "__main__":
+    if len(sys.argv) != 4:
+        print("Usage: ./proxy <listen-port> <fake-ip> <server-ip>")
+        sys.exit(1)
+
+    listen_port = int(sys.argv[1])
+    fake_ip = sys.argv[2]
+    server_ip = sys.argv[3]
+    
+    start_proxy(listen_port, fake_ip, server_ip)

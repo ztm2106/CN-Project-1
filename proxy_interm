@@ -1,0 +1,90 @@
+#!/usr/bin/env python3.10
+import socket
+import sys
+import time
+import threading
+import os
+
+# Function for client connection, forwarding requests to the server
+def handle_client(client_socket, server_ip, fake_ip, log_file):
+    start_time = time.time()
+    
+    try:
+        with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as server_socket:
+            # Bind to the fake IP and connect to the real server
+            server_socket.bind((fake_ip, 0))
+            server_socket.connect((server_ip, 80))
+
+            # Forward request from client to server
+            request = client_socket.recv(4096)
+            server_socket.sendall(request)
+
+            # Extract chunk name (assuming it's an HTTP GET request)
+            request_str = request.decode('utf-8')
+            chunkname = request_str.split(' ')[1]  # This gets the requested path from HTTP GET request
+
+            # Start time for downloading the chunk
+            download_start_time = time.time()
+
+            # Collect response from the server
+            response_data = b""
+            while True:
+                response_chunk = server_socket.recv(4096)
+                if not response_chunk:
+                    break
+                response_data += response_chunk
+
+            # Send entire response back to the client
+            client_socket.sendall(response_data)
+
+            # Calculate download duration
+            duration = time.time() - download_start_time
+            
+            # Log the required information
+            chunk_size = len(response_data)
+            log_entry = f"{time.time():.6f} {duration:.3f} {server_ip} {chunkname} {chunk_size}\n"
+
+            # Write log entry to the log file
+            with open(log_file, 'a') as log:
+                log.write(log_entry)
+                log.flush()  # Ensure the log is flushed to disk after every line
+
+    except Exception as e:
+        print(f"Error: {e}")
+    finally:
+        client_socket.close()
+
+# Main function setting up proxy server, accepting incoming connections, and spawning threads
+def start_proxy(log_file, listen_port, fake_ip, server_ip):
+    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as proxy_socket:
+        # Bind the socket to listen on the specified port (for incoming connections)
+        proxy_socket.bind(("", listen_port))
+        proxy_socket.listen(5)
+        print(f"Proxy listening on port {listen_port}...")
+
+        while True:
+            client_socket, client_address = proxy_socket.accept()
+            print(f"Client {client_address} connected.")
+            
+            # Start a new thread to handle the client connection
+            client_handler = threading.Thread(
+                target=handle_client,
+                args=(client_socket, server_ip, fake_ip, log_file)
+            )
+            client_handler.start()
+
+# Entry point of the script
+if __name__ == "__main__":
+    if len(sys.argv) != 5:
+        print("Usage: ./proxy <log> <listen-port> <fake-ip> <server-ip>")
+        sys.exit(1)
+
+    # Command-line arguments
+    log_file = sys.argv[1]
+    listen_port = int(sys.argv[2])
+    fake_ip = sys.argv[3]
+    server_ip = sys.argv[4]
+
+    # Start the proxy server
+    start_proxy(log_file, listen_port, fake_ip, server_ip)
+
